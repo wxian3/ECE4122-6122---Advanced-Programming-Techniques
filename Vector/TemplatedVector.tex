@@ -1,0 +1,146 @@
+\documentclass[10pt]{article}
+\usepackage{times,epsfig}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\topmargin}{-0.5in}
+\usepackage{amsmath}
+\input{../teach}
+\input{../TAName}
+\begin{document}
+\header{Project 3 -- Templated Vector Class}
+{Assigned: October 4, 2016}
+{Due: October 28, 2016, 11:59pm}
+{ECE4122/6122}
+{Fall Semester, 2016}
+
+\paragraph{Overview}
+For this project, we will implement a templated class called {\tt Vector}
+that is essentially a variable length array.  The {\tt Vector}
+can grow as necessary as new elements are added to the array.  Further
+we will implement a iterator called {\tt VectorIterator} that exists to
+``refer to'', or ``point to'' an existing element in the {\tt Vector}.
+The required API's are specifed in the provided {\tt Vector.h} file.
+
+\paragraph{Copying the Project Skeletons}
+\begin{enumerate}
+\item Log into {\tt jinx-login.cc} using {\tt ssh} and your prism log-in name.
+\item Copy the files from the ECE8893 user account using the following
+command:
+\begin{verbatim}
+/usr/bin/rsync -avu /nethome/ECE6122/Vector .
+\end{verbatim}
+Be sure to notice the period at the end of the above command.
+\item Change your working directory to {\tt Vector}
+\begin{verbatim}
+cd Vector
+\end{verbatim}
+\item Copy the provided {\tt Vector-skeleton.cc} to {\tt Vector.cc} as follows:
+\begin{verbatim}
+cp Vector-skeleton.cc Vector.cc
+\end{verbatim}
+\item If you are an undergraduate, comment out the definition of
+{\tt GRAD\_STUDENT} in {\tt Vector.h}.
+\item Then edit {\tt Vector.cc} to implement your {\tt Vector} and
+{\tt VectorIterator}
+\item Compile your code using {\tt make} as follows:
+\begin{verbatim}
+make
+\end{verbatim}
+\item This builds a program called {\tt testVec} that has eight
+different test cases to test your implementation.
+\item Once you have gotten the program compiled and ready to test,
+you can begin running the tests.  Running {\tt testVec} with no arguments
+runs all tests; running with a single argument is assumed to be the
+test number you want to run.  Grad students must run all eight tests,
+undergrads only need tests 1-6.  You should consider debugging by running
+one test at a time.
+\end{enumerate}
+
+\paragraph{Resources}
+\begin{enumerate}
+\item {\tt Vector-skeleton.cc} is a starting point for your program.
+\item {\tt Vector.h} describes the classes and required API.
+\item {\tt testVec.cc} is the test program to test your implementation.  Do not change this program.
+\item {\tt String.h} and {\tt String.cc} are used by the testing program.
+You should not need to edit either of these.
+\item {\tt Makefile} is the makefile for the testVec program.
+\item {\tt expected-alltests.txt} is the expected output from running
+all tests.
+\end{enumerate}
+
+\paragraph{Checking for Memory Leaks}
+An important requirement for this assignment is to properly manage memory
+and to have NO MEMORY LEAKS.  On the jinx--login system, you can run
+the {\tt valgrind} program, which give detailed memory usage statistics
+and leak statistics.  Run {\tt valgrind} as follows:
+
+\begin{verbatim}
+valgrind --tool=memcheck testVec (your test number here)
+\end{verbatim}
+
+At the end of the execution, {\tt valgrind} prints a summary of the
+memory leaks.  You are hoping for the message
+{\tt All heap blocks were freed -- no leaks are possible}.
+If you have memory leaks, you will only get half credit for the particular
+test (see the section below on grading).
+
+\paragraph{In--Place new and delete}
+Recall that we said in class that the {\tt new} operator, by default,
+does two separate and independent things. First is to find some memory
+to store the new object, and second is to call the constructor for
+the object.  In this assignment, you will often want to call a constructor,
+but to use existing memory.  This is called an {\em in--place new}.
+The syntax is:
+
+{\tt new (address) constructor}
+
+The {\tt address} is the address of an existing memory region where
+the new object will be stored.  The {\tt constructor} is the
+constructor (default, copy, etc) to use.
+
+Similarly, the {\tt delete} operator does two independent things.
+First is to call the destructor for the object, and the second is to
+free the memory associated with the object.  Again, in this assignment
+you will frequently want to call the destructor for an object, but do not
+want the memory freed.  Given an object of type $T$, the syntax for
+in--place delete is:
+
+{\tt object.\symbol{126}T();}  or {\tt objPointer->\symbol{126}T();}
+
+Here, {\tt object} is a variable of type $T$ and {\tt objPointer}
+is a pointer to an object of type $T$.
+
+
+\paragraph{Grading}
+For undergrads, there are six individual tests, worth 20 points each.
+For graduates, there are eight test worth 15 points each. In both 
+cases, the total possible is 120 points (this is a very difficult
+assignment!).  If you get the right answer but have memory leaks, you
+will get half credit for the particular test.
+
+\paragraph{Using the GNU Debugger}
+The GNU debugger {\tt gdb} is invaluable in debugging this assignment.
+We will discuss {\tt gdb} and other issues for this assignment in the
+next class lecture, Wed Oct 19.
+
+\paragraph{Turning in your Project.}
+The system administrator for the jinx cluster has created a script
+that you are to use to turn in  your project.  The script is called
+{\tt riley-turnin} and is found in {\tt /usr/local/bin}, which should
+be in the search path for everyone.  From your {\bf home directory}
+(not the Vector subdirectory), enter:
+\par
+{\tt turnin-ece6122 Vector}.
+
+or
+
+{\tt turnin-ece4122 Vector}.
+
+\par
+This automatically copies everything in your {\tt Vector}
+directory to a place that I can access (and grade) it.
+
+
+\end{document}

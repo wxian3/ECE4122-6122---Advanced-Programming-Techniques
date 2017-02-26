@@ -1,0 +1,257 @@
+\documentclass[10pt]{article}
+\usepackage{times,epsfig}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\topmargin}{-0.5in}
+\usepackage{amsmath}
+\input{../teach}
+\input{../TAName}
+\begin{document}
+\header{Project 1 -- The Distributed Two--Dimensional Discrete Fourier Transform}
+{Assigned: Mon August 29, 2016}
+{Due: Mon September 12, 2016, 11:59pm}
+{ECE6122/4122}
+{Fall Semester, 2016}
+
+\def\td{two--dimensional}
+\def\od{one--dimensional}
+Given a \od\ array of complex or real input values of length $N$,
+the Discrete Fourier Transform consists af an array of size $N$ computed
+as follows:
+
+\begin{equation}
+\label{Eq:DFT}
+H[n] = \sum_{k=0}^{N-1} W^{nk}h[k]
+\hspace{0.5in}\mbox{where}\ \ 
+W = e^{-j2\pi/N} = \mbox{cos}(2\pi/N)-j\mbox{sin}(2\pi/N)
+\hspace{0.5in}\mbox{where}\ \ 
+j = \sqrt{-1}
+\end{equation}
+For all equations in this document, we use the following notational
+conventions.
+$h$ is the discrete--time sampled signal array.
+$H$ is the Fourier transform array of $h$. 
+$N$ is the length of the sample array, and is always
+assumed to be an even power of 2.
+$n$ is an index into the $h$ and $H$ arrays, and is always in the
+range $0 \ldots (N-1)$.
+$k$ is also an index into $h$ and $H$, and is the summation
+variable when needed.
+$j$ is the square root of negative one.
+
+The above equation clearly requires $N^2$ computations, and as $N$
+gets large the computation time can become excessive.  There are
+a number of well--known approaches that reduce the comutation time
+considerably, but for the purpose of this assignment you can just
+use the simple double summation shown above.
+
+Given a \td\ matrix of complex input values, the \td\
+Fourier Transform can be computed with two simple steps.  First, the
+\od\ transform is computed for each row in the matrix 
+individually.  Then a {\em second} \od\ transform is done on each
+{\em column} of the matrix individually.
+Note that the transformed values from the
+first step are the inputs to the second step.
+
+If we have several CPU's to use to compute the 2D DFT, it is easy to see
+how some of these steps can be done simulataneously.  For example, if we
+are computing a 2D DFT of a 16 by 16 matrix, and if we had 16 CPUs available,
+we could assign each of the
+16 CPU's to compute the DFT of a given row.  In this simple example,
+CPU 0 would compute the \od\ DFT for row 0, CPU 1 would compute for row 1,
+and so on.  If we did this, the first
+step (computing DFT's of the rows) should run 16 times faster than when
+we only used one CPU.
+
+However, when computing the second step, we run into difficulties.  
+When CPU 0 completes the \od\ DFT for row 0, it would presumably be ready
+compute the 1D DFT for {\em column} 0.  Unfortunately, the computed results
+for all other columns are not available to CPU 0 easily.  We can solve this
+problem by using {\em message passing}.  After each CPU completes the 
+first step (computing 1D DFT's for each row), it must send the required
+values to the other processes using {\em MPI}.  In this example, CPU 0
+would send to CPU 1 the computed transform value for row 0, column 1, and
+send to CPU 2 the computed transform value for row 0, column 2, and so on.
+When each CPU has received $k$ messages with column values ($k$ is the
+total number of columns in the input set), it is then ready to compute
+the column DFT.
+
+Finally, each CPU must report the final result (again using message passing)
+to a designated CPU responsible for collecting and printing the final
+transformed value.  Normally, CPU 0 would be chosen for this task, but in 
+fact any CPU could be assigned to do this.
+
+
+We are going to use 16 CPUs in the {\em deepthought} cluster to perform
+the 2d DFT using distributed computing.
+%% The job scheduling on {\em deepthought}
+%% is done by the {\em Torque Resource Manager}. This is described on the
+%% {\em deepthought} web page at:
+
+{\tt http://support.cc.gatech.edu/facilities/instructional-labs/deepthought-cluster/ \\
+      how-to-run-jobs-on-the-deepthought-cluster}
+
+{\em For now ignore the discussion about using {\tt qsub} to submit job requests.
+We will discuss this in class. }
+%% A correct job scheduling script is provided for you in file {\tt runDFT.sh}.
+%% Instructions for submitting jobs are given below.
+
+\paragraph{Copying the Project Skeletons}
+\begin{enumerate}
+\item Log into {\tt deepthought19.cc} using {\tt ssh} and your prism log-in name.
+\item Copy the files from the ECE6122 user account using the following
+command:
+\begin{verbatim}
+/usr/bin/rsync -avu /nethome/ECE6122/FourierTransform2D .
+\end{verbatim}
+Be sure to notice the period at the end of the above command.
+\item Change your working directory to {\tt FourierTransform2D}
+\begin{verbatim}
+cd FourierTransform2D
+\end{verbatim}
+\item Copy the provided {\tt fft2d-skeleton.cc} to {\tt fft2d.cc} as follows:
+\begin{verbatim}
+cp fft2d-skeleton.cc fft2d.cc
+\end{verbatim}
+\item Then edit {\tt fft2d.cc} to implement the transform.
+\begin{enumerate}
+\item Implement a simple \od\ DFT using the double summation approach
+in the equations above.
+\item Use MPI send and receive to send partial
+information between the 16 processes.
+\item Use CPU at rank zero to collect the final transformed values
+from all other CPU's, and write these results to a file called
+{\tt MyAfter2D.txt} using the {\tt SaveImageData} method in
+class {\tt InputImage}.
+\end{enumerate}
+\item Compile your code using {\tt make} as follows:
+\begin{verbatim}
+make
+\end{verbatim}
+\end{enumerate}
+%% \item Once you have gotten the fft2d program compiled and ready to test,
+%% edit the {\tt runDFT.sh} script to change {\tt YourLastNameHere}
+%% to give your last name.  This is how your jobs are identified to the
+%% job scheduler.
+%% \item Test your solution
+%% with the provided inputs.  Testing is done by submitting your job to
+%% the scheduler using {\tt qsub}.
+%% \begin{verbatim}
+%% qsub runDFT.sh
+%% \end{verbatim}
+%% \item You can check the status of your submitted jobs by using {\tt qstat}
+%% \begin{verbatim}
+%% qstat runDFT.sh
+%% \end{verbatim}
+%% \item When your submitted job completes, you will have two files created
+%% in your workign directory with the outputs from the job and any errors produced by your job (hopefully
+%% empty).
+%% \end{enumerate}
+
+\paragraph{Resources}
+\begin{enumerate}
+\item {\tt fft2d-skeleton.cc} is a starting point for your program.
+%% \item {\tt runDFT.sh} is the job submission script to use.  Be sure to change
+%% the {\tt -N} parameter to your name.
+\item {\tt Complex.cc} and {\tt Complex.h} provide a completed C++
+object containing a complex (real and imaginary parts) value.
+\item {\tt Makefile} is a file used by the {\tt make} command to
+build fft2d.
+\item {\tt Tower.txt} is the input dataset, a 256 by 256 image of the
+Tech tower in black and white.
+\item {\tt after1D.txt} is the expected value of the DFT
+after the initial \od\ transform on each row, but before the column
+transforms have been done. This is for debugging only as the assignment does
+not need to write the \od\ transformed results.
+\item {\tt after2D.txt} is the expected output dataset after the two dimensional
+transformation, 
+a 256 by 256 matrix of the transformed values.
+\item {\tt InputImage.cc} and {\tt InputImage.h} that will ease the reading
+of the input data.  This object has several useful functions to help with
+managing the input data.
+\item DO NOT ASSUME that the MPI size will always be 16.  Instead implement
+the program with a variable (perhaps {\tt nCPUs}) that contains the
+MPI size.
+\begin{enumerate}
+\item The {\tt InputImage} constructor, which has a {\tt char*} argument
+specifying the file name of the input image.
+\item The {\tt GetWidth()} function that returns the width of the image.
+\item The {\tt GetHeight()} function that returns the height of the image.
+\item The {\tt GetImageData()} function returns a one-dimensional array
+of type {\tt Complex} representing the original time-domain input values.
+\item The {\tt SaveImageData} function writes a file containing the
+transformed data.
+\item The {\tt SaveImageDataReal} function writes a file with only
+the real part of the image transformed data.
+\end{enumerate}
+\end{enumerate}
+
+\paragraph{Output File Naming Convention}
+In order to ease the grading procedure, you must write the results of
+the 2D transform on a file named {\tt MyAfter2D.txt}.  
+For debugging, if you want the results of the 1D transforms, write
+the results to a file named {\tt MyAfter1D.txt}.
+For graduate students also computing the reverse transform, write those results
+to a file named {\tt MyAfterInverse.txt}.
+
+\paragraph {Graduate Students only}.
+After the 2D transform has been completed, use MPI again to calculate the
+{\em Inverse} transform, and write the results to file {\tt MyAfterInverse.txt}.
+Use the {\tt SaveImageDataReal} function to write results. This function writes
+the real part only (as the imaginary parts should be zero or near zero after
+the inverse.
+
+\paragraph{Turning in your Project.}
+%% Your assignment will be turned in automatically on the due date.
+%% Be sure to put your code in subdirectory {\tt FourierTransform2D}
+%% in your home directory on {\tt deepthought19.cc}
+Details about turning in your program will be provided.  
+
+\paragraph{Some thoughts on implementing the 2D DFT}
+\begin{enumerate}
+\item Consider using Rank 0 as the traffic cop to handle the data
+collection and dissemination.  This means you would actually need
+17 ranks, using one (rank 0) as the coordinator, and the other 
+16 ranks as the ``worker'' processes.
+\item After reading in the original {\tt Tower.txt}, create a second
+array of size (width * height) which represents the $H$ array (the
+transformed data).  We need this because the simple DFT algorithm
+given above cannot transform {\em in-place}. In other words, the
+$H$ array and the $h$ array are different areas of memory.
+\item Clearly a working \od\ DFT is needed before a correct \td\ 
+DFT can be implemented.  Consider using a single CPU (no MPI) to
+read the {\tt Tower.txt} file (using {\tt InputImage}), and doing
+a \od\ DFT on all rows. Then save the resulting file (again
+using the {\tt InputImage.SaveImageData}) and comparing to 
+{\tt after1d.txt}.
+\item Once the \od\ DFT is working, use MPI as described above, and
+assign each CPU the correct number of rows, and what row they
+should start on.  Assuming {\tt nCpus} is the variable containing the
+number of CPU's, {\tt nRows} is the number of rows in the image, and
+{\tt myRank} is the rank number of this CPU, then the number of rows
+per CPU is {\tt nRows / nCpus}, and the starting row number for
+each CPU is {\tt nRows / nCpus * myRank}.
+\item After computing the \od\ DFT on each assigned row use MPI
+to send information to all other CPU.  Each CPU will need to send
+{\tt nCpus - 1} messages, one message to all other CPUs.  Also you will
+likely need a separate array of type Complex, as the data to be send
+is not necessarily in sequential memory locations.
+\item You shoudl consider a mix of blocking and non-blocking MPI
+calls to move the data around the various ranks as needed.
+\item Also consider using the Tag field in the send and receive
+calls to get the received data in the proper location as you move
+the rows and columns around.
+\item After receiving information from all of your peers (and storing
+that information in the $H$ array in the right place), perform the
+column-wise \od\ DFT on each of your columns.
+You might need yet another array of size (width * height) for this
+as well, although you can actually use a smaller array (each CPU only
+uses operates on a subset of all the columns).
+\item After the second set of transforms, use MPI to send all computed
+information to the master (CPU rank 0).  You can use non-blocking
+send here, as we are sure CPU 0 will eventually call {\tt recv}.
+\item Finally, write out the final 2d transform using {\tt SaveImageData}.
+\end{enumerate}
+\end{document}

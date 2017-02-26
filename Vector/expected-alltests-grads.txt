@@ -1,0 +1,859 @@
+Starting Test1
+Test1 results
+Hello from string front 49
+Hello from string front 48
+Hello from string front 47
+Hello from string front 46
+Hello from string front 45
+Hello from string front 44
+Hello from string front 43
+Hello from string front 42
+Hello from string front 41
+Hello from string front 40
+Hello from string front 39
+Hello from string front 38
+Hello from string front 37
+Hello from string front 36
+Hello from string front 35
+Hello from string front 34
+Hello from string front 33
+Hello from string front 32
+Hello from string front 31
+Hello from string front 30
+Hello from string front 29
+Hello from string front 28
+Hello from string front 27
+Hello from string front 26
+Hello from string front 25
+Hello from string front 24
+Hello from string front 23
+Hello from string front 22
+Hello from string front 21
+Hello from string front 20
+Hello from string front 19
+Hello from string front 18
+Hello from string front 17
+Hello from string front 16
+Hello from string front 15
+Hello from string front 14
+Hello from string front 13
+Hello from string front 12
+Hello from string front 11
+Hello from string front 10
+Hello from string front 9
+Hello from string front 8
+Hello from string front 7
+Hello from string front 6
+Hello from string front 5
+Hello from string front 4
+Hello from string front 3
+Hello from string front 2
+Hello from string front 1
+Hello from string front 0
+Hello from string back 0
+Hello from string back 1
+Hello from string back 2
+Hello from string back 3
+Hello from string back 4
+Hello from string back 5
+Hello from string back 6
+Hello from string back 7
+Hello from string back 8
+Hello from string back 9
+Hello from string back 10
+Hello from string back 11
+Hello from string back 12
+Hello from string back 13
+Hello from string back 14
+Hello from string back 15
+Hello from string back 16
+Hello from string back 17
+Hello from string back 18
+Hello from string back 19
+Hello from string back 20
+Hello from string back 21
+Hello from string back 22
+Hello from string back 23
+Hello from string back 24
+Hello from string back 25
+Hello from string back 26
+Hello from string back 27
+Hello from string back 28
+Hello from string back 29
+Hello from string back 30
+Hello from string back 31
+Hello from string back 32
+Hello from string back 33
+Hello from string back 34
+Hello from string back 35
+Hello from string back 36
+Hello from string back 37
+Hello from string back 38
+Hello from string back 39
+Hello from string back 40
+Hello from string back 41
+Hello from string back 42
+Hello from string back 43
+Hello from string back 44
+Hello from string back 45
+Hello from string back 46
+Hello from string back 47
+Hello from string back 48
+Hello from string back 49
+DefaultCount  0
+CreateCount   100
+CopyCount     5050
+DestructCount 5150
+AssignCount   0
+Starting Test2
+Test2 results
+Hello from string back 49
+Hello from string back 48
+Hello from string back 47
+Hello from string back 46
+Hello from string back 45
+Hello from string back 44
+Hello from string back 43
+Hello from string back 42
+Hello from string back 41
+Hello from string back 40
+Hello from string back 39
+Hello from string back 38
+Hello from string back 37
+Hello from string back 36
+Hello from string back 35
+Hello from string back 34
+Hello from string back 33
+Hello from string back 32
+Hello from string back 31
+Hello from string back 30
+Hello from string back 29
+Hello from string back 28
+Hello from string back 27
+Hello from string back 26
+Hello from string back 25
+Hello from string back 24
+Hello from string back 23
+Hello from string back 22
+Hello from string back 21
+Hello from string back 20
+Hello from string back 19
+Hello from string back 18
+Hello from string back 17
+Hello from string back 16
+Hello from string back 15
+Hello from string back 14
+Hello from string back 13
+Hello from string back 12
+Hello from string back 11
+Hello from string back 10
+Hello from string back 9
+Hello from string back 8
+Hello from string back 7
+Hello from string back 6
+Hello from string back 5
+Hello from string back 4
+Hello from string back 3
+Hello from string back 2
+Hello from string back 1
+Hello from string back 0
+Hello from string front 0
+Hello from string front 1
+Hello from string front 2
+Hello from string front 3
+Hello from string front 4
+Hello from string front 5
+Hello from string front 6
+Hello from string front 7
+Hello from string front 8
+Hello from string front 9
+Hello from string front 10
+Hello from string front 11
+Hello from string front 12
+Hello from string front 13
+Hello from string front 14
+Hello from string front 15
+Hello from string front 16
+Hello from string front 17
+Hello from string front 18
+Hello from string front 19
+Hello from string front 20
+Hello from string front 21
+Hello from string front 22
+Hello from string front 23
+Hello from string front 24
+Hello from string front 25
+Hello from string front 26
+Hello from string front 27
+Hello from string front 28
+Hello from string front 29
+Hello from string front 30
+Hello from string front 31
+Hello from string front 32
+Hello from string front 33
+Hello from string front 34
+Hello from string front 35
+Hello from string front 36
+Hello from string front 37
+Hello from string front 38
+Hello from string front 39
+Hello from string front 40
+Hello from string front 41
+Hello from string front 42
+Hello from string front 43
+Hello from string front 44
+Hello from string front 45
+Hello from string front 46
+Hello from string front 47
+Hello from string front 48
+Hello from string front 49
+DefaultCount  0
+CreateCount   150
+CopyCount     5150
+DestructCount 5300
+AssignCount   0
+Starting Test3
+Test3 results
+Hello from string front 49
+Hello from string front 48
+Hello from string front 47
+Hello from string front 46
+Hello from string front 45
+Hello from string front 44
+Hello from string front 43
+Hello from string front 42
+Hello from string front 41
+Hello from string front 40
+Hello from string front 39
+Hello from string front 38
+Hello from string front 37
+Hello from string front 36
+Hello from string front 35
+Hello from string front 34
+Hello from string front 33
+Hello from string front 32
+Hello from string front 31
+Hello from string front 30
+Hello from string front 29
+Hello from string front 28
+Hello from string front 27
+Hello from string front 26
+Hello from string front 25
+Hello from string front 24
+Hello from string front 23
+Hello from string front 22
+Hello from string front 21
+Hello from string front 20
+Hello from string front 19
+Hello from string front 18
+Hello from string front 17
+Hello from string front 16
+Hello from string front 15
+Hello from string front 14
+Hello from string front 13
+Hello from string front 12
+Hello from string front 11
+Hello from string front 10
+Hello from string front 9
+Hello from string front 8
+Hello from string front 7
+Hello from string front 6
+Hello from string front 5
+Hello from string front 4
+Hello from string front 3
+Hello from string front 2
+Hello from string front 1
+Hello from string front 0
+Hello from string back 0
+Hello from string back 1
+Hello from string back 2
+Hello from string back 3
+Hello from string back 4
+Hello from string back 5
+Hello from string back 6
+Hello from string back 7
+Hello from string back 8
+Hello from string back 9
+Hello from string back 10
+Hello from string back 11
+Hello from string back 12
+Hello from string back 13
+Hello from string back 14
+Hello from string back 15
+Hello from string back 16
+Hello from string back 17
+Hello from string back 18
+Hello from string back 19
+Hello from string back 20
+Hello from string back 21
+Hello from string back 22
+Hello from string back 23
+Hello from string back 24
+Hello from string back 25
+Hello from string back 26
+Hello from string back 27
+Hello from string back 28
+Hello from string back 29
+Hello from string back 30
+Hello from string back 31
+Hello from string back 32
+Hello from string back 33
+Hello from string back 34
+Hello from string back 35
+Hello from string back 36
+Hello from string back 37
+Hello from string back 38
+Hello from string back 39
+Hello from string back 40
+Hello from string back 41
+Hello from string back 42
+Hello from string back 43
+Hello from string back 44
+Hello from string back 45
+Hello from string back 46
+Hello from string back 47
+Hello from string back 48
+Hello from string back 49
+DefaultCount  0
+CreateCount   100
+CopyCount     10100
+DestructCount 10200
+AssignCount   0
+Starting Test4
+Test4 results
+Hello from string front 49
+Hello from string front 48
+Hello from string front 47
+Hello from string front 46
+Hello from string front 45
+Hello from string front 44
+Hello from string front 43
+Hello from string front 42
+Hello from string front 41
+Hello from string front 40
+Hello from string front 39
+Hello from string front 38
+Hello from string front 37
+Hello from string front 36
+Hello from string front 35
+Hello from string front 34
+Hello from string front 33
+Hello from string front 32
+Hello from string front 31
+Hello from string front 30
+Hello from string front 29
+Hello from string front 28
+Hello from string front 27
+Hello from string front 26
+Hello from string front 25
+Hello from string front 24
+Hello from string front 23
+Hello from string front 22
+Hello from string front 21
+Hello from string front 20
+Hello from string front 19
+Hello from string front 18
+Hello from string front 17
+Hello from string front 16
+Hello from string front 15
+Hello from string front 14
+Hello from string front 13
+Hello from string front 12
+Hello from string front 11
+Hello from string front 10
+Hello from string front 9
+Hello from string front 8
+Hello from string front 7
+Hello from string front 6
+Hello from string front 5
+Hello from string front 4
+Hello from string front 3
+Hello from string front 2
+Hello from string front 1
+Hello from string front 0
+Hello from string back 0
+Hello from string back 1
+Hello from string back 2
+Hello from string back 3
+Hello from string back 4
+Hello from string back 5
+Hello from string back 6
+Hello from string back 7
+Hello from string back 8
+Hello from string back 9
+Hello from string back 10
+Hello from string back 11
+Hello from string back 12
+Hello from string back 13
+Hello from string back 14
+Hello from string back 15
+Hello from string back 16
+Hello from string back 17
+Hello from string back 18
+Hello from string back 19
+Hello from string back 20
+Hello from string back 21
+Hello from string back 22
+Hello from string back 23
+Hello from string back 24
+Hello from string back 25
+Hello from string back 26
+Hello from string back 27
+Hello from string back 28
+Hello from string back 29
+Hello from string back 30
+Hello from string back 31
+Hello from string back 32
+Hello from string back 33
+Hello from string back 34
+Hello from string back 35
+Hello from string back 36
+Hello from string back 37
+Hello from string back 38
+Hello from string back 39
+Hello from string back 40
+Hello from string back 41
+Hello from string back 42
+Hello from string back 43
+Hello from string back 44
+Hello from string back 45
+Hello from string back 46
+Hello from string back 47
+Hello from string back 48
+Hello from string back 49
+Test4 results again, should be Empty
+DefaultCount  0
+CreateCount   100
+CopyCount     5150
+DestructCount 5250
+AssignCount   0
+Starting Test5
+Test5 results
+Hello from string front 49
+Hello from string front 48
+Hello from string front 47
+Hello from string front 46
+Hello from string front 45
+Hello from string front 44
+Hello from string front 43
+Hello from string front 42
+Hello from string front 41
+Hello from string front 40
+Hello from string front 39
+Hello from string front 38
+Hello from string front 37
+Hello from string front 36
+Hello from string front 35
+Hello from string front 34
+Hello from string front 33
+Hello from string front 32
+Hello from string front 31
+Hello from string front 30
+Hello from string front 29
+Hello from string front 28
+Hello from string front 27
+Hello from string front 26
+Hello from string front 25
+Hello from string front 24
+Hello from string front 23
+Hello from string front 22
+Hello from string front 21
+Hello from string front 20
+Hello from string front 19
+Hello from string front 18
+Hello from string front 17
+Hello from string front 16
+Hello from string front 15
+Hello from string front 14
+Hello from string front 13
+Hello from string front 12
+Hello from string front 11
+Hello from string front 10
+Hello from string front 9
+Hello from string front 8
+Hello from string front 7
+Hello from string front 6
+Hello from string front 5
+Hello from string front 4
+Hello from string front 3
+Hello from string front 2
+Hello from string front 1
+Hello from string front 0
+Hello from string back 0
+Hello from string back 1
+Hello from string back 2
+Hello from string back 3
+Hello from string back 4
+Hello from string back 5
+Hello from string back 6
+Hello from string back 7
+Hello from string back 8
+Hello from string back 9
+Hello from string back 10
+Hello from string back 11
+Hello from string back 12
+Hello from string back 13
+Hello from string back 14
+Hello from string back 15
+Hello from string back 16
+Hello from string back 17
+Hello from string back 18
+Hello from string back 19
+Hello from string back 20
+Hello from string back 21
+Hello from string back 22
+Hello from string back 23
+Hello from string back 24
+Hello from string back 25
+Hello from string back 26
+Hello from string back 27
+Hello from string back 28
+Hello from string back 29
+Hello from string back 30
+Hello from string back 31
+Hello from string back 32
+Hello from string back 33
+Hello from string back 34
+Hello from string back 35
+Hello from string back 36
+Hello from string back 37
+Hello from string back 38
+Hello from string back 39
+Hello from string back 40
+Hello from string back 41
+Hello from string back 42
+Hello from string back 43
+Hello from string back 44
+Hello from string back 45
+Hello from string back 46
+Hello from string back 47
+Hello from string back 48
+Hello from string back 49
+DefaultCount  0
+CreateCount   100
+CopyCount     5050
+DestructCount 5150
+AssignCount   0
+Starting Test6
+Test6 results
+Hello from string replaced 0
+Hello from string replaced 1
+Hello from string replaced 2
+Hello from string replaced 3
+Hello from string replaced 4
+Hello from string replaced 5
+Hello from string replaced 6
+Hello from string replaced 7
+Hello from string replaced 8
+Hello from string replaced 9
+Hello from string replaced 10
+Hello from string replaced 11
+Hello from string replaced 12
+Hello from string replaced 13
+Hello from string replaced 14
+Hello from string replaced 15
+Hello from string replaced 16
+Hello from string replaced 17
+Hello from string replaced 18
+Hello from string replaced 19
+Hello from string replaced 20
+Hello from string replaced 21
+Hello from string replaced 22
+Hello from string replaced 23
+Hello from string replaced 24
+Hello from string replaced 25
+Hello from string replaced 26
+Hello from string replaced 27
+Hello from string replaced 28
+Hello from string replaced 29
+Hello from string replaced 30
+Hello from string replaced 31
+Hello from string replaced 32
+Hello from string replaced 33
+Hello from string replaced 34
+Hello from string replaced 35
+Hello from string replaced 36
+Hello from string replaced 37
+Hello from string replaced 38
+Hello from string replaced 39
+Hello from string replaced 40
+Hello from string replaced 41
+Hello from string replaced 42
+Hello from string replaced 43
+Hello from string replaced 44
+Hello from string replaced 45
+Hello from string replaced 46
+Hello from string replaced 47
+Hello from string replaced 48
+Hello from string replaced 49
+DefaultCount  0
+CreateCount   100
+CopyCount     1275
+DestructCount 1375
+AssignCount   50
+Starting Test7
+Test7 results
+Hello from string front 49
+Hello from string front 48
+Hello from string front 47
+Hello from string front 46
+Hello from string front 45
+Hello from string front 44
+Hello from string front 43
+Hello from string front 42
+Hello from string front 41
+Hello from string front 40
+Hello from string front 39
+Hello from string front 38
+Hello from string front 37
+Hello from string front 36
+Hello from string front 35
+Hello from string front 34
+Hello from string front 33
+Hello from string front 32
+Hello from string front 31
+Hello from string front 30
+Hello from string front 29
+Hello from string front 28
+Hello from string front 27
+Hello from string front 26
+Inserted element before 25th
+Hello from string front 25
+Hello from string front 24
+Hello from string front 23
+Hello from string front 22
+Hello from string front 21
+Hello from string front 20
+Hello from string front 19
+Hello from string front 18
+Hello from string front 17
+Hello from string front 16
+Hello from string front 15
+Hello from string front 14
+Hello from string front 13
+Hello from string front 12
+Hello from string front 11
+Hello from string front 10
+Hello from string front 9
+Hello from string front 8
+Hello from string front 7
+Hello from string front 6
+Hello from string front 5
+Hello from string front 4
+Hello from string front 3
+Hello from string front 2
+Hello from string front 1
+Hello from string front 0
+Hello from string back 0
+Hello from string back 1
+Hello from string back 2
+Hello from string back 3
+Hello from string back 4
+Hello from string back 5
+Hello from string back 6
+Hello from string back 7
+Hello from string back 8
+Hello from string back 9
+Hello from string back 10
+Hello from string back 11
+Hello from string back 12
+Hello from string back 13
+Hello from string back 14
+Hello from string back 15
+Hello from string back 16
+Hello from string back 17
+Hello from string back 18
+Hello from string back 19
+Hello from string back 20
+Hello from string back 21
+Hello from string back 22
+Hello from string back 23
+Hello from string back 24
+Hello from string back 25
+Hello from string back 26
+Hello from string back 27
+Hello from string back 28
+Hello from string back 29
+Hello from string back 30
+Hello from string back 31
+Hello from string back 32
+Hello from string back 33
+Hello from string back 34
+Hello from string back 35
+Hello from string back 36
+Hello from string back 37
+Hello from string back 38
+Hello from string back 39
+Hello from string back 40
+Hello from string back 41
+Hello from string back 42
+Hello from string back 43
+Hello from string back 44
+Hello from string back 45
+Hello from string back 46
+Hello from string back 47
+Hello from string back 48
+Hello from string back 49
+Test7 results again, should be missing 10th element
+Hello from string front 49
+Hello from string front 48
+Hello from string front 47
+Hello from string front 46
+Hello from string front 45
+Hello from string front 44
+Hello from string front 43
+Hello from string front 42
+Hello from string front 41
+Hello from string front 39
+Hello from string front 38
+Hello from string front 37
+Hello from string front 36
+Hello from string front 35
+Hello from string front 34
+Hello from string front 33
+Hello from string front 32
+Hello from string front 31
+Hello from string front 30
+Hello from string front 29
+Hello from string front 28
+Hello from string front 27
+Hello from string front 26
+Inserted element before 25th
+Hello from string front 25
+Hello from string front 24
+Hello from string front 23
+Hello from string front 22
+Hello from string front 21
+Hello from string front 20
+Hello from string front 19
+Hello from string front 18
+Hello from string front 17
+Hello from string front 16
+Hello from string front 15
+Hello from string front 14
+Hello from string front 13
+Hello from string front 12
+Hello from string front 11
+Hello from string front 10
+Hello from string front 9
+Hello from string front 8
+Hello from string front 7
+Hello from string front 6
+Hello from string front 5
+Hello from string front 4
+Hello from string front 3
+Hello from string front 2
+Hello from string front 1
+Hello from string front 0
+Hello from string back 0
+Hello from string back 1
+Hello from string back 2
+Hello from string back 3
+Hello from string back 4
+Hello from string back 5
+Hello from string back 6
+Hello from string back 7
+Hello from string back 8
+Hello from string back 9
+Hello from string back 10
+Hello from string back 11
+Hello from string back 12
+Hello from string back 13
+Hello from string back 14
+Hello from string back 15
+Hello from string back 16
+Hello from string back 17
+Hello from string back 18
+Hello from string back 19
+Hello from string back 20
+Hello from string back 21
+Hello from string back 22
+Hello from string back 23
+Hello from string back 24
+Hello from string back 25
+Hello from string back 26
+Hello from string back 27
+Hello from string back 28
+Hello from string back 29
+Hello from string back 30
+Hello from string back 31
+Hello from string back 32
+Hello from string back 33
+Hello from string back 34
+Hello from string back 35
+Hello from string back 36
+Hello from string back 37
+Hello from string back 38
+Hello from string back 39
+Hello from string back 40
+Hello from string back 41
+Hello from string back 42
+Hello from string back 43
+Hello from string back 44
+Hello from string back 45
+Hello from string back 46
+Hello from string back 47
+Hello from string back 48
+Hello from string back 49
+DefaultCount  0
+CreateCount   101
+CopyCount     5242
+DestructCount 5343
+AssignCount   0
+Starting Test8
+Test8 results
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+Replicated Constructor
+DefaultCount  0
+CreateCount   51
+CopyCount     1280
+DestructCount 1331
+AssignCount   0
